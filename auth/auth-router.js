@@ -1,4 +1,9 @@
 const express = require('express');
 const router = express.Router();
 
-const db = require('../data/db-config.js');
+
+// POST /api/register
+
+// POST /api/login
+
+module.exports = router;
