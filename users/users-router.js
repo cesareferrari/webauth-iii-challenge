@@ -1,10 +1,11 @@
 const express = require('express');
 const router = express.Router();
 const Users = require('./users-model.js');
+const validate = require('../auth/restricted-middleware.js');
 
 // GET /api/users/
 
-router.get('/', async (req, res) => {
+router.get('/', validate, async (req, res) => {
   const users = await Users.all();
 
   try {
